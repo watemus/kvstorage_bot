@@ -5,7 +5,7 @@ services:
     image: redis:6.2-alpine
     restart: always
     ports:
-      - '6379:6379'
+      - '22869:22869'
     command: redis-server --save 20 1 --loglevel warning --requirepass underwaterlove
     volumes:
       - /data/tips/cache:/data
