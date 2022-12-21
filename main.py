@@ -16,9 +16,8 @@ class KVStorage:
         return self.r.get(key)
 
 
-API_TOKEN = open('tg_token').read()
+API_TOKEN = open('tg_token').read().strip()
 
-print(API_TOKEN)
 
 logging.basicConfig(level=logging.INFO)
 
