@@ -26,7 +26,8 @@ storage = KVStorage()
 
 HELP_MESSAGE = """Usage:
 !set key value
-!get key"""
+!get key
+"""
 
 
 @dp.message_handler(commands=['start', 'help'])
