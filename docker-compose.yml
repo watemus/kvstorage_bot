@@ -10,10 +10,6 @@ services:
       - "6969:6969"
     expose:
       - "6969"
-    volumes:
-      - type: volume
-        source: redis-data
-        target: /data
     restart: always
     networks:
       - app-hash-tier
