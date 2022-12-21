@@ -10,15 +10,15 @@ services:
     volumes:
       - /data/tips/cache:/data
     networks:
-      - app-tier
+      - app-hash-tier
   web:
     build: .
     command: python main.py
     networks:
-      - app-tier
+      - app-hash-tier
     depends_on:
       - db
 
 networks:
-  app-tier:
+  app-hash-tier:
     driver: bridge
