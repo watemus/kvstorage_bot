@@ -18,6 +18,8 @@ class KVStorage:
 
 API_TOKEN = open('tg_token').read()
 
+print(API_TOKEN)
+
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=API_TOKEN)
