@@ -2,13 +2,19 @@ version: "3.9"
 
 services:
   db:
-    image: redis:6.2-alpine
-    restart: always
+    container_name: redis
+    hostname: redis
+    image: sameersbn/redis:4.0.9-2
+    command: --port 6380
     ports:
-      - '6969:6969'
-    command: redis-server --save 20 1 --loglevel warning --requirepass underwaterlove
+      - "6969:6969"
+    expose:
+      - "6969"
     volumes:
-      - /data/tips/cache:/data
+      - type: volume
+        source: redis-data
+        target: /data
+    restart: always
     networks:
       - app-hash-tier
   web:
