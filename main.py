@@ -7,7 +7,7 @@ from aiogram.utils import executor
 
 class KVStorage:
     def __init__(self):
-        self.r = redis.Redis(host='db', port=22869, db=0, password='underwaterlove')
+        self.r = redis.Redis(host='db', port=6969, db=0, password='underwaterlove')
 
     async def store(self, key: str, value: str):
         self.r.set(key, value)
